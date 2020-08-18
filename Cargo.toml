@@ -15,6 +15,7 @@ bin = ["rocket", "rocket_contrib", "dotenv", "tokio"]
 [dependencies]
 wasm-bindgen = "0.2"
 yew = "0.17"
+yew-router = "0.14"
 dotenv = { version = "0.15", optional = true }
 
 [dependencies.rocket]
