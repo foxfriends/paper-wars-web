@@ -1,30 +1,30 @@
 use yew::prelude::*;
 use yew_router::prelude::*;
 
+mod layout;
+use layout::Layout;
+
 mod about;
 mod index;
-
 use about::About;
 use index::Index;
 
-#[derive(Clone, Debug, Switch)]
-pub enum Route {
+#[derive(Clone, Eq, PartialEq, Debug, Switch)]
+pub enum AppRoute {
     #[to = "/about/"]
     About,
     #[to = "/"]
     Index,
 }
 
-pub struct Routes {
-    link: ComponentLink<Self>,
-}
+pub struct Routes;
 
 impl Component for Routes {
     type Message = ();
     type Properties = ();
 
-    fn create(_props: Self::Properties, link: ComponentLink<Self>) -> Self {
-        Self { link }
+    fn create(_props: Self::Properties, _link: ComponentLink<Self>) -> Self {
+        Self
     }
 
     fn update(&mut self, _msg: Self::Message) -> ShouldRender {
@@ -37,10 +37,16 @@ impl Component for Routes {
 
     fn view(&self) -> Html {
         html! {
-            <Router<Route, ()>
-                render = Router::render(|switch: Route|  match switch {
-                    Route::Index => html! { <Index /> },
-                    Route::About => html! { <About /> },
+            <Router<AppRoute, ()>
+                render = Router::render(|switch: AppRoute| html! {
+                    <Layout route=switch.clone()>
+                        {
+                            match switch {
+                                AppRoute::Index => html! { <Index /> },
+                                AppRoute::About => html! { <About /> },
+                            }
+                        }
+                    </Layout>
                 })
             />
         }

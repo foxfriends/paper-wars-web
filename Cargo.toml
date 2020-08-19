@@ -1,8 +1,8 @@
 [package]
-name = "web"
-version = "0.1.0"
 authors = ["Cameron Eldridge <cameldridge@gmail.com>"]
 edition = "2018"
+name = "web"
+version = "0.1.0"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -10,13 +10,17 @@ crate-type = ["cdylib", "rlib"]
 [features]
 bin = ["rocket", "rocket_contrib", "dotenv", "tokio"]
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
+lazy_static = "1.4"
 wasm-bindgen = "0.2"
 yew = "0.17"
 yew-router = "0.14"
-dotenv = { version = "0.15", optional = true }
+yewtil = "0.3"
+client = { path = "../client" }
+
+[dependencies.dotenv]
+optional = true
+version = "0.15"
 
 [dependencies.rocket]
 branch = "master"
@@ -25,12 +29,12 @@ optional = true
 
 [dependencies.rocket_contrib]
 branch = "master"
-git = "https://github.com/SergioBenitez/Rocket"
 default-features = false
 features = ["serve"]
+git = "https://github.com/SergioBenitez/Rocket"
 optional = true
 
 [dependencies.tokio]
-version = "0.2"
 features = ["macros"]
 optional = true
+version = "0.2"

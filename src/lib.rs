@@ -3,6 +3,7 @@ use yew::prelude::*;
 
 mod components;
 mod routes;
+mod services;
 
 #[wasm_bindgen(start)]
 pub fn run_app() {
