@@ -1,8 +1,8 @@
 use wasm_bindgen::prelude::*;
 use yew::prelude::*;
 
-mod routes;
 mod components;
+mod routes;
 
 #[wasm_bindgen(start)]
 pub fn run_app() {
