@@ -1,0 +1,45 @@
+.layout {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-areas:
+        'logo header header'
+        'nav main aside'
+        'footer footer footer';
+
+    --sidebar-size: calc(var(--tile-size) * 8);
+    --main-size: calc(var(--tile-size) * 24);
+    --remaining-size: calc((100vw - ((2 * var(--sidebar-size)) + var(--main-size))) / 2);
+    grid-template-rows: var(--tile-size) auto var(--tile-size);
+    grid-template-columns: var(--sidebar-size) var(--main-size) var(--sidebar-size);
+    background-position: var(--remaining-size) 0;
+    padding: 0 var(--remaining-size);
+}
+
+.layout__logo {
+    grid-area: logo;
+}
+
+.layout__header {
+    grid-area: header;
+}
+
+.layout_nav {
+    grid-area: nav;
+}
+
+.layout__main {
+    grid-area: main;
+}
+
+.layout_aside {
+    grid-area: aside;
+}
+
+.layout__footer {
+    grid-area: footer;
+}

@@ -7,7 +7,7 @@ const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
   mode,
-  entry: ['./app/index.js', './app/index.css'],
+  entry: ['./app/script/index.js', './app/style/index.css'],
   output: {
     path: path.resolve('static'),
     filename: 'index.js',
