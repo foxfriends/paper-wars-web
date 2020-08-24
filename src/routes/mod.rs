@@ -4,15 +4,11 @@ use yew_router::prelude::*;
 mod layout;
 use layout::Layout;
 
-mod about;
 mod index;
-use about::About;
 use index::Index;
 
 #[derive(Clone, Eq, PartialEq, Debug, Switch)]
 pub enum AppRoute {
-    #[to = "/about/"]
-    About,
     #[to = "/"]
     Index,
 }
@@ -43,7 +39,6 @@ impl Component for Routes {
                         {
                             match switch {
                                 AppRoute::Index => html! { <Index /> },
-                                AppRoute::About => html! { <About /> },
                             }
                         }
                     </Layout>

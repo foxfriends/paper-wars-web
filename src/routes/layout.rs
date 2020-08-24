@@ -2,8 +2,6 @@ use super::AppRoute;
 use yew::prelude::*;
 use yewtil::NeqAssign;
 
-use crate::components::Nav;
-
 pub struct Layout {
     props: Props,
 }
@@ -32,28 +30,26 @@ impl Component for Layout {
 
     fn view(&self) -> Html {
         html! {
-            <>
-                <div class="layout grid">
-                    <div class="layout__logo">
-                        {"Paper Wars"}
-                    </div>
-                    <header class="layout__header">
-                        // TODO: header
-                    </header>
-                    <nav class="layout__nav">
-                        <Nav />
-                    </nav>
-                    <main class="layout__main">
-                        { self.props.children.clone() }
-                    </main>
-                    <aside class="layout__aside">
-                        // TODO: aside
-                    </aside>
-                    <footer class="layout__footer">
-                        // TODO: footer
-                    </footer>
+            <div class="layout grid">
+                <div class="layout__logo">
+                    {"Paper Wars"}
                 </div>
-            </>
+                <header class="layout__header">
+                    // TODO: header
+                </header>
+                <nav class="layout__nav">
+                    // TODO: is this even a nav?
+                </nav>
+                <main class="layout__main">
+                    { self.props.children.clone() }
+                </main>
+                <aside class="layout__aside">
+                    // TODO: aside
+                </aside>
+                <footer class="layout__footer">
+                    // TODO: footer
+                </footer>
+            </div>
         }
     }
 }
