@@ -36,6 +36,10 @@ features = ["serve"]
 git = "https://github.com/SergioBenitez/Rocket"
 optional = true
 
+[dependencies.serde]
+features = ["derive"]
+version = "1.0"
+
 [dependencies.tokio]
 features = ["macros"]
 optional = true

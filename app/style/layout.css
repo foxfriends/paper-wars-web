@@ -16,6 +16,7 @@
     --remaining-size: calc((100vw - ((2 * var(--sidebar-size)) + var(--main-size))) / 2);
     grid-template-rows: var(--tile-size) auto var(--tile-size);
     grid-template-columns: var(--sidebar-size) var(--main-size) var(--sidebar-size);
+
     background-position: var(--remaining-size) 0;
     padding: 0 var(--remaining-size);
 }

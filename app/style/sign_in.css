@@ -1,0 +1,34 @@
+.sign-in {
+    --form-width: calc(var(--tile-size) * 18);
+    --form-height: calc(var(--tile-size) * 12);
+    --remaining-width: calc((100vw - var(--form-width)) / 2);
+    background-position: var(--remaining-width) 0;
+}
+
+.sign-in__form {
+    box-sizing: border-box;
+    height: var(--form-height);
+    width: var(--form-width);
+    margin: calc(var(--tile-size) * 4) auto;
+    padding: 0 var(--tile-size);
+    border: var(--border--outline);
+
+    display: grid;
+    grid-auto-rows: var(--tile-size);
+    grid-gap: var(--tile-size);
+}
+
+.sign-in__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22pt;
+}
+
+.sign-in__field {
+    box-sizing: border-box;
+    height: var(--tile-size);
+    padding: 0 8px;
+    border: var(--border--outline);
+    background: none;
+}

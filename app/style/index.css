@@ -1,5 +1,8 @@
 :root {
     --tile-size: 48px;
+
+    --border--divider: 1px solid rgba(0, 0, 0, 0.12);
+    --border--outline: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 body, p, h1, h2, h3, h4, h5, h6, span, div {
@@ -21,4 +24,5 @@ i, emph {
 
 @import './background.css';
 @import './layout.css';
+@import './sign_in.css';
 @import './nav.css';

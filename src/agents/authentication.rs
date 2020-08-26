@@ -3,6 +3,7 @@ use std::collections::HashSet;
 use wasm_bindgen_futures::spawn_local;
 use yew::worker::*;
 
+#[derive(Clone, Debug)]
 pub enum Request {
     Authenticate {
         email: String,
