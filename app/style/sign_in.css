@@ -1,6 +1,6 @@
 .sign-in {
     --form-width: calc(var(--tile-size) * 18);
-    --form-height: calc(var(--tile-size) * 12);
+    --form-height: calc(var(--tile-size) * 8);
     --remaining-width: calc((100vw - var(--form-width)) / 2);
     background-position: var(--remaining-width) 0;
 }
@@ -9,7 +9,7 @@
     box-sizing: border-box;
     height: var(--form-height);
     width: var(--form-width);
-    margin: calc(var(--tile-size) * 4) auto;
+    margin: calc(var(--tile-size) * 8) auto;
     padding: 0 var(--tile-size);
     border: var(--border--outline);
 
